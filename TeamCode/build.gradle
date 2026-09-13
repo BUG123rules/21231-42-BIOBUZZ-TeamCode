@@ -19,6 +19,11 @@ apply from: '../build.dependencies.gradle'
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
 
+    compileSdk 35
+    defaultConfig {
+        minSdk 24
+    }
+
     packagingOptions {
         jniLibs.useLegacyPackaging true
     }
@@ -26,4 +31,13 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
+    implementation "org.solverslib:core:0.3.5" // core
+    implementation "org.solverslib:pedroPathing:0.3.5" // pedroPathing
+    implementation "com.bylazar:fullpanels:0.4.4" // Use latest version
+}
+
+repositories {
+    maven {
+        url "https://repo.dairy.foundation/releases"
+    }
 }

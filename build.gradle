@@ -28,4 +28,7 @@ allprojects {
 
 repositories {
     mavenCentral()
+    maven {
+        url = "https://mymaven.bylazar.com/releases"
+    }
 }
