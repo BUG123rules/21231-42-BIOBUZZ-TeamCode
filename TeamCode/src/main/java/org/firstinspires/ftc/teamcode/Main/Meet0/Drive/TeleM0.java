@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.Main.Meet0.Drive;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.seattlesolvers.solverslib.command.CommandOpMode;
 
+import org.firstinspires.ftc.teamcode.Main.Meet0.Subsystems.IntakeCmds;
 import org.firstinspires.ftc.teamcode.Main.Pedro.PedroConstants;
 
 import com.pedropathing.follower.Follower;
@@ -13,9 +14,10 @@ import com.pedropathing.follower.ManualDrive;
 
 
 @TeleOp (name = "TeleM1")
-public class TeleM1 extends CommandOpMode
+public class TeleM0 extends CommandOpMode
 {
     private Follower follower;
+    private IntakeCmds intakeCmds;
 
     boolean started = false;
 
@@ -32,7 +34,7 @@ public class TeleM1 extends CommandOpMode
         {
             started = true;
 
-
+            intakeCmds.intakeOn();
         }
 
         follower.update();
@@ -44,6 +46,9 @@ public class TeleM1 extends CommandOpMode
                 follower.pose().heading()
         );
         follower.manual(powers);
+
+        if (gamepad1.aWasPressed()) intakeCmds.intakeOn();
+        if (gamepad1.bWasPressed()) intakeCmds.intakeOff();
     }
 
     @Override
