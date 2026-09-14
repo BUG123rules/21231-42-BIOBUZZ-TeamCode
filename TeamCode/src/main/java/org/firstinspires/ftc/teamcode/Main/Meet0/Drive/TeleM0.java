@@ -25,6 +25,7 @@ public class TeleM0 extends CommandOpMode
     public void initialize()
     {
         follower = PedroConstants.create(hardwareMap);
+        intakeCmds = new IntakeCmds(hardwareMap);
     }
 
     @Override
