@@ -47,7 +47,7 @@ If you find these libraries useful, please go star their repos and check out the
 
 1. **Clone** this repository:
    ```bash
-   git clone <this-repo-url>
+   git clone github.com/BUG123rules/21231-42-BIOBUZZ-TeamCode
    ```
 2. **Open** the project in [Android Studio](https://developer.android.com/studio).
 3. **Sync Gradle** — all library dependencies are already configured in the build files.
